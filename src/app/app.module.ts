@@ -9,12 +9,14 @@ import { CarrinhoProdutosComponent } from './carrinho-produtos/carrinho-produtos
 import {AppRoutingModule} from "./app-routing.module";
 import {ProtudosService} from "./service/protudos.service";
 import { LadingComponent } from './lading/lading.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgOptimizedImage
   ],
   declarations: [
     AppComponent,

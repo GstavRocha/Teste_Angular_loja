@@ -11,9 +11,7 @@ export class ProtudosService {
     this.produtos = []
   }
   getJson():Observable<ModeloProdutos>{
-    const rota = this.http.get<ModeloProdutos>('assets/produtos.json')
-    console.log(rota)
-    return this.http.get<ModeloProdutos>('assets/produtos.json')
+    return  this.http.get<ModeloProdutos>('assets/produtos.json')
   }
   allProdutos(){
     return this.produtos;

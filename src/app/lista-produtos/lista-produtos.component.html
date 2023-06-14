@@ -19,10 +19,18 @@
     </div>
   </div>
 </div>
-<div tyle="margin-top: 5rem">
-  <ol *ngFor="let produto of listaProdutos">
-    <li>{{produto.nome}}</li>
-  </ol>
+<div style="margin-top: 5rem">
+  <div *ngFor="let produto of listaProdutos,let i = index ">
+    <div class="card-body">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" ngSrc="{{produto.img}}" alt="Card image cap" width="250" height="250">
+          <div class="card-body">
+            <h5 class="card-title"><ul>{{i}} - {{produto.nome}}</ul></h5>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+    </div>
+  </div>
 </div>
 </body>
 
