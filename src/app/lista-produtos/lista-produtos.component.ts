@@ -7,15 +7,15 @@ import {ModeloProdutos} from "../service/model/modeloProdutos";
   templateUrl: './lista-produtos.component.html',
   styleUrls: ['./lista-produtos.component.css']
 })
-export class ListaProdutosComponent implements OnInit{
+  export class ListaProdutosComponent{
   listaProdutos: ModeloProdutos[]
-constructor(private ps: ProtudosService) {
+  constructor(private ps: ProtudosService) {
     this.listaProdutos = [];
-    this.ps.testeConsole()
+    this.getProdutos()
   }
-  ngOnInit() {
-    this.ps.getJson().subscribe(res =>{
-      this.listaProdutos = Object.values(res)[0]
+  getProdutos(){
+    this.ps.getJson().subscribe((res:ModeloProdutos) =>{
+       return this.listaProdutos = Object.values(res)[0];
     })
   }
 }

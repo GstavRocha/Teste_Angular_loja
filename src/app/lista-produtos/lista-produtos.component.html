@@ -12,21 +12,17 @@
     </ul>
   </div>
 </nav>
-<div class="row-cols-3">
-  <div class="card" style="width: 20rem;">
-    <img src="..." alt="">
-    <div class="card-body">
-      <h5 class="card-title">texto card</h5>
+<div style="margin-top: 5rem">
+  <div class="card text-center">
+    <div class="card-header">
+      <h2>Produtos</h2>
     </div>
   </div>
-
 </div>
-
-<div class="card text-center">
-  <div class="card-header">
-    <h2>Produtos</h2>
-  </div>
-
+<div tyle="margin-top: 5rem">
+  <ol *ngFor="let produto of listaProdutos">
+    <li>{{produto.nome}}</li>
+  </ol>
 </div>
 </body>
 
